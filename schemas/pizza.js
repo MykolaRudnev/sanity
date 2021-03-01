@@ -1,5 +1,6 @@
 import { StructureBuilder } from '@sanity/structure';
 import { MdLocalPizza as icon } from 'react-icons/md';
+import PriceInput from '../components/PriceInput';
 
 export default {
   name: 'pizza',
@@ -36,7 +37,7 @@ export default {
       type: 'number',
       description: 'Pizza of the pizza in cents',
       validation: (Rule) => Rule.min(1000),
-      // TODO : add custome input component
+      inputComponent: PriceInput,
     },
     {
       name: 'toppings',
